@@ -4,8 +4,10 @@
 #
 # Based on AboutNil in the Ruby Koans
 #
-
+from runner.koan import assert_match
+from runner.koan import *
 import unittest
+
 
 
 class AboutNone(unittest.TestCase):
@@ -41,7 +43,7 @@ class AboutNone(unittest.TestCase):
 
             # What message was attached to the exception?
             # (HINT: replace __ with part of the error message.)
-            self.assertMatch(__, ex.args[0])
+            assert_match(__, ex.args[0])
 
     def test_none_is_distinct(self):
         """
