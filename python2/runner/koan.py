@@ -17,8 +17,7 @@ def assert_match(pattern, string, msg=None):
     if not m or not m.group(0):
         raise Exception((msg or '{0!r} does not match {1!r}'.format(pattern, string)))
 
-
-__all__ = ["__", "___", "____", "_____", "Koan"]
+__all__ = ["__", "___", "____", "_____", "Koan", "assert_match"]
 
 __ = "-=> FILL ME IN! <=-"
 
