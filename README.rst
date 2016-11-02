@@ -5,7 +5,7 @@ Python Koans
 This is a fork of
 https://github.com/gregmalcolm/python_koans
 
-converted to run with a standard unit test runner, instead of a commandline
+Converted to run with a standard unit test runner, instead of a command line.
 
 Python Koans is an interactive tutorial for learning the Python programming
 language by making tests pass.
@@ -32,7 +32,7 @@ a taste of Test Driven Development (TDD).
 Installing Python Koans
 -----------------------
 
-I suggest you use PyCharm, to run a test it's control+shift+r
+I suggest you use PyCharm, to run a test it's Control+Shift+R
 
 
 Getting Started
