@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from runner.koan import *
 import unittest
 
 # You need to write the triangle method in the file 'triangle.py'

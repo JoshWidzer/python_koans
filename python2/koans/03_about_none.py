@@ -4,7 +4,6 @@
 #
 # Based on AboutNil in the Ruby Koans
 #
-from runner.koan import assert_match
 from runner.koan import *
 import unittest
 

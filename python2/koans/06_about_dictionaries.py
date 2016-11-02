@@ -5,6 +5,7 @@
 # Based on AboutHashes in the Ruby Koans
 #
 
+from runner.koan import *
 import unittest
 
 

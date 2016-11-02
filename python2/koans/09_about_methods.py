@@ -5,6 +5,7 @@
 # Partially based on AboutMethods in the Ruby Koans
 #
 
+from runner.koan import *
 import unittest
 
 

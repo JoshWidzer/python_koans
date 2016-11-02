@@ -4,7 +4,7 @@
 #
 # Based on AboutArrays in the Ruby Koans
 #
-
+from runner.koan import *
 import unittest
 
 
