@@ -4,6 +4,7 @@
 import unittest
 
 import random
+from runner.koan import *
 
 
 class DiceSet(object):

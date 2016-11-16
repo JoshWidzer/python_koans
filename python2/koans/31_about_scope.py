@@ -20,7 +20,7 @@ class AboutScope(unittest.TestCase):
         try:
             fido = Dog()
         except Exception as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_you_can_reference_nested_classes_using_the_scope_operator(self):
         fido = jims.Dog()

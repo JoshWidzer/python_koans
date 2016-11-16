@@ -6,6 +6,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 
 class AboutMultipleInheritance(unittest.TestCase):
@@ -88,7 +89,7 @@ class AboutMultipleInheritance(unittest.TestCase):
 
     def test_normal_methods_are_available_in_the_object(self):
         jeff = self.Spiderpig()
-        self.assertMatch(__, jeff.speak())
+        assert_match(__, jeff.speak())
 
     def test_base_class_methods_are_also_available_in_the_object(self):
         jeff = self.Spiderpig()
@@ -127,13 +128,13 @@ class AboutMultipleInheritance(unittest.TestCase):
 
     def test_confirm_the_mro_controls_the_calling_order(self):
         jeff = self.Spiderpig()
-        self.assertMatch('Spiderpig', jeff.here())
+        assert_match('Spiderpig', jeff.here())
 
         next = super(AboutMultipleInheritance.Spiderpig, jeff)
-        self.assertMatch('Pig', next.here())
+        assert_match('Pig', next.here())
 
         next = super(AboutMultipleInheritance.Pig, jeff)
-        self.assertMatch(__, next.here())
+        assert_match(__, next.here())
 
         # Hang on a minute?!? That last class name might be a super class of
         # the 'jeff' object, but its hardly a superclass of Pig, is it?

@@ -15,7 +15,7 @@ class AboutTuples(unittest.TestCase):
         try:
             count_of_three[2] = "three"
         except TypeError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_tuples_are_immutable_so_appending_is_not_possible(self):
         count_of_three = (1, 2, 5)
@@ -26,7 +26,7 @@ class AboutTuples(unittest.TestCase):
 
             # Note, assertMatch() uses regular expression pattern matching,
             # so you don't have to copy the whole message.
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
         # Tuples are less flexible than lists, but faster.
 

@@ -4,6 +4,7 @@
 import unittest
 
 import functools
+from runner.koan import *
 
 
 class AboutDecoratingWithClasses(unittest.TestCase):

@@ -7,6 +7,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 #
 # Package hierarchy of Python Koans project:
@@ -43,7 +44,7 @@ class AboutPackages(unittest.TestCase):
         try:
             import a_normal_folder
         except ImportError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     # ------------------------------------------------------------------
 

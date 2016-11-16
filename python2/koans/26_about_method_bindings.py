@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 def function():
@@ -44,7 +45,7 @@ class AboutMethodBindings(unittest.TestCase):
         try:
             obj.method.cherries = 3
         except AttributeError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_setting_attributes_on_methods_by_accessing_the_inner_function(self):
         obj = Class()
@@ -60,7 +61,7 @@ class AboutMethodBindings(unittest.TestCase):
         try:
             cls = function2.get_fruit.im_self
         except AttributeError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     # ------------------------------------------------------------------
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-
+from runner.koan import *
 
 class AboutIteration(unittest.TestCase):
 
@@ -27,7 +27,7 @@ class AboutIteration(unittest.TestCase):
         except StopIteration as ex:
             err_msg = 'Ran out of iterations'
 
-        self.assertMatch(__, err_msg)
+        assert_match(__, err_msg)
 
     # ------------------------------------------------------------------
 

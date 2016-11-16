@@ -6,6 +6,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 
 class AboutClassAttributes(unittest.TestCase):
@@ -59,7 +60,7 @@ class AboutClassAttributes(unittest.TestCase):
         try:
             rover.wag()
         except Exception as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     # ------------------------------------------------------------------
 
@@ -82,19 +83,19 @@ class AboutClassAttributes(unittest.TestCase):
             return "classmethod growl, arg: cls=" + cls.__name__
 
     def test_like_all_objects_classes_can_have_singleton_methods(self):
-        self.assertMatch(__, self.Dog2.growl())
+        assert_match(__, self.Dog2.growl())
 
     def test_classmethods_are_not_independent_of_instance_methods(self):
         fido = self.Dog2()
-        self.assertMatch(__, fido.growl())
-        self.assertMatch(__, self.Dog2.growl())
+        assert_match(__, fido.growl())
+        assert_match(__, self.Dog2.growl())
 
     def test_staticmethods_are_unbound_functions_housed_in_a_class(self):
-        self.assertMatch(__, self.Dog2.bark())
+        assert_match(__, self.Dog2.bark())
 
     def test_staticmethods_also_overshadow_instance_methods(self):
         fido = self.Dog2()
-        self.assertMatch(__, fido.bark())
+        assert_match(__, fido.bark())
 
     # ------------------------------------------------------------------
 
@@ -125,7 +126,7 @@ class AboutClassAttributes(unittest.TestCase):
         try:
             fido.name = "Fido"
         except Exception as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_classes_and_instances_do_not_share_instance_attributes(self):
         fido = self.Dog3()

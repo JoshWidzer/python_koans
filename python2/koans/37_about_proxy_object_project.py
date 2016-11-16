@@ -17,6 +17,7 @@
 # can do it!
 
 import unittest
+from runner.koan import *
 
 
 class Proxy(object):

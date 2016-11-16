@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 class AboutDecoratingWithFunctions(unittest.TestCase):
@@ -14,7 +15,7 @@ class AboutDecoratingWithFunctions(unittest.TestCase):
         return "o/~ We all live in a broken submarine o/~"
 
     def test_decorators_can_modify_a_function(self):
-        self.assertMatch(__, self.mediocre_song())
+        assert_match(__, self.mediocre_song())
         self.assertEqual(__, self.mediocre_song.wow_factor)
 
     # ------------------------------------------------------------------

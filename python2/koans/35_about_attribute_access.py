@@ -6,6 +6,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 
 class AboutAttributeAccess(unittest.TestCase):
@@ -20,7 +21,7 @@ class AboutAttributeAccess(unittest.TestCase):
             typical.foobar()
         except Exception as exception:
             self.assertEqual(__, exception.__class__.__name__)
-            self.assertMatch(__, exception[0])
+            assert_match(__, exception[0])
 
     def test_calling_getattribute_causes_an_attribute_error(self):
         typical = self.TypicalObject()
@@ -28,7 +29,7 @@ class AboutAttributeAccess(unittest.TestCase):
         try:
             typical.__getattribute__('foobar')
         except AttributeError as exception:
-            self.assertMatch(__, exception[0])
+            assert_match(__, exception[0])
 
         # THINK ABOUT IT:
         #
@@ -45,17 +46,17 @@ class AboutAttributeAccess(unittest.TestCase):
     def test_all_attribute_reads_are_caught(self):
         catcher = self.CatchAllAttributeReads()
 
-        self.assertMatch(__, catcher.foobar)
+        assert_match(__, catcher.foobar)
 
     def test_intercepting_return_values_can_disrupt_the_call_chain(self):
         catcher = self.CatchAllAttributeReads()
 
-        self.assertMatch(__, catcher.foobaz)  # This is fine
+        assert_match(__, catcher.foobaz)  # This is fine
 
         try:
             catcher.foobaz(1)
         except TypeError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
         # foobaz returns a string. What happens to the '(1)' part?
         # Try entering this into a python console to reproduce the issue:
@@ -66,7 +67,7 @@ class AboutAttributeAccess(unittest.TestCase):
     def test_changing_getattribute_will_affect__the_getattr_function(self):
         catcher = self.CatchAllAttributeReads()
 
-        self.assertMatch(__, getattr(catcher, 'any_attribute'))
+        assert_match(__, getattr(catcher, 'any_attribute'))
 
     # ------------------------------------------------------------------
 
@@ -91,7 +92,7 @@ class AboutAttributeAccess(unittest.TestCase):
         try:
             catcher.normal_undefined_attribute
         except AttributeError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     # ------------------------------------------------------------------
 

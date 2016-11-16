@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 class AboutComprehension(unittest.TestCase):

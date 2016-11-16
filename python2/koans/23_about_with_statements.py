@@ -6,6 +6,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 import re  # For regular expression string comparisons
 

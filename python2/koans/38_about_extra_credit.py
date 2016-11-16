@@ -11,6 +11,8 @@
 # is a free form assignment, so approach it however you desire.
 
 import unittest
+from runner.koan import *
+from runner.koan import *
 
 
 class AboutExtraCredit(unittest.TestCase):

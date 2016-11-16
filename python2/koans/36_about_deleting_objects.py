@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 class AboutDeletingObjects(unittest.TestCase):
@@ -19,7 +20,7 @@ class AboutDeletingObjects(unittest.TestCase):
             win = lottery_nums
         except Exception as e:
             pass
-        self.assertMatch(__, e[0])
+        assert_match(__, e[0])
 
     # --------------------------------------------------------------------
 
@@ -52,8 +53,8 @@ class AboutDeletingObjects(unittest.TestCase):
         except AttributeError as e:
             err_msg2 = e.args[0]
 
-        self.assertMatch(__, err_msg1)
-        self.assertMatch(__, err_msg2)
+        assert_match(__, err_msg1)
+        assert_match(__, err_msg2)
 
     # --------------------------------------------------------------------
 

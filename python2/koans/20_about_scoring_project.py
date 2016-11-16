@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 # Greed is a dice game where you roll up to five dice to accumulate

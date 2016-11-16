@@ -10,6 +10,7 @@ import unittest
 
 from another_local_module import *
 from local_module_with_all_defined import *
+from runner.koan import *
 
 
 class AboutModules(unittest.TestCase):
@@ -50,7 +51,7 @@ class AboutModules(unittest.TestCase):
         try:
             private_squirrel = _SecretSquirrel()
         except NameError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_private_attributes_are_still_accessible_in_modules(self):
         from local_module import Duck  # local_module.py
@@ -78,4 +79,4 @@ class AboutModules(unittest.TestCase):
         try:
             duck = SecretDuck()
         except NameError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])

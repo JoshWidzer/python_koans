@@ -9,6 +9,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 
 class AboutGenerators(unittest.TestCase):
@@ -113,7 +114,7 @@ class AboutGenerators(unittest.TestCase):
         try:
             generator.send(1 + 2)
         except TypeError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     # ------------------------------------------------------------------
 

@@ -6,6 +6,7 @@
 #
 
 import unittest
+from runner.koan import *
 
 
 class AboutMonkeyPatching(unittest.TestCase):
@@ -36,7 +37,7 @@ class AboutMonkeyPatching(unittest.TestCase):
         try:
             int.is_even = lambda self: (self % 2) == 0
         except StandardError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     # ------------------------------------------------------------------
 

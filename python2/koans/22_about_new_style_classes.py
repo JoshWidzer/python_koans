@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 class AboutNewStyleClasses(unittest.TestCase):
@@ -42,7 +43,7 @@ class AboutNewStyleClasses(unittest.TestCase):
             pass
 
         # What was that error message from the exception?
-        self.assertMatch(__, ex[0])
+        assert_match(__, ex[0])
 
     def test_new_style_classes_have_same_class_as_type(self):
         new_style = self.NewStyleClass()

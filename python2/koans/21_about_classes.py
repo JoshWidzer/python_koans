@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from runner.koan import *
 
 
 class AboutClasses(unittest.TestCase):
@@ -13,7 +14,7 @@ class AboutClasses(unittest.TestCase):
         self.assertEqual(__, fido.__class__.__name__)
 
     def test_classes_have_docstrings(self):
-        self.assertMatch(__, self.Dog.__doc__)
+        assert_match(__, self.Dog.__doc__)
 
     # ------------------------------------------------------------------
 

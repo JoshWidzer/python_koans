@@ -41,7 +41,7 @@ class AboutInheritance(unittest.TestCase):
             fido = self.Dog("Fido")
             fido.wag()
         except StandardError as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_subclasses_can_modify_existing_behavior(self):
         chico = self.Chihuahua("Chico")
@@ -85,7 +85,7 @@ class AboutInheritance(unittest.TestCase):
         try:
             name = snoopy.name
         except Exception as ex:
-            self.assertMatch(__, ex[0])
+            assert_match(__, ex[0])
 
     def test_base_init_has_to_be_called_explicitly(self):
         boxer = self.Greyhound("Boxer")

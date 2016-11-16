@@ -26,7 +26,7 @@ class AboutMethods(unittest.TestCase):
             # NOTE: The .__name__ attribute will convert the class
             # into a string value.
             self.assertEqual(__, exception.__class__.__name__)
-            self.assertMatch(
+            assert_match(
                 r'my_global_function\(\) takes exactly 2 arguments \(0 given\)',
                 exception[0])
 
@@ -35,7 +35,7 @@ class AboutMethods(unittest.TestCase):
         except Exception as e:
 
             # Note, watch out for parenthesis. They need slashes in front!
-            self.assertMatch(__, e[0])
+            assert_match(__, e[0])
 
     # ------------------------------------------------------------------
 
@@ -128,7 +128,7 @@ class AboutMethods(unittest.TestCase):
         return "ok"
 
     def test_the_documentation_can_be_viewed_with_the_doc_method(self):
-        self.assertMatch(__, self.method_with_documentation.__doc__)
+        assert_match(__, self.method_with_documentation.__doc__)
 
     # ------------------------------------------------------------------
 
