@@ -17,7 +17,16 @@ def assert_match(pattern, string, msg=None):
     if not m or not m.group(0):
         raise Exception((msg or '{0!r} does not match {1!r}'.format(pattern, string)))
 
-__all__ = ["__", "___", "____", "_____", "Koan", "assert_match"]
+def assert_no_match(pattern, string, msg=None):
+    """
+    Throw an exception if the regular expresson pattern is not matched
+    """
+    m = re.search(pattern, string)
+    if m and m.group(0):
+        raise Exception, \
+            (msg or '{0!r} matches {1!r}'.format(pattern, string))
+
+__all__ = ["__", "___", "____", "_____", "assert_match","assert_no_match"]
 
 __ = "-=> FILL ME IN! <=-"
 
@@ -31,12 +40,3 @@ ____ = "-=> TRUE OR FALSE? <=-"
 _____ = 0
 
 
-class Koan(unittest.TestCase):
-    def assertNoMatch(self, pattern, string, msg=None):
-        """
-        Throw an exception if the regular expresson pattern is not matched
-        """
-        m = re.search(pattern, string)
-        if m and m.group(0):
-            raise self.failureException, \
-                (msg or '{0!r} matches {1!r}'.format(pattern, string))
