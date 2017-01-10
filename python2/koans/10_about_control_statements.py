@@ -77,6 +77,6 @@ class AboutControlStatements(unittest.TestCase):
 
         assert_match(text, result[2])
 
-        self.assertNoMatch(text, result[0])
-        self.assertNoMatch(text, result[1])
-        self.assertNoMatch(text, result[3])
+        assert_no_match(text, result[0])
+        assert_no_match(text, result[1])
+        assert_no_match(text, result[3])
