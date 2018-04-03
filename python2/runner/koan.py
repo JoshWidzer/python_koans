@@ -23,8 +23,7 @@ def assert_no_match(pattern, string, msg=None):
     """
     m = re.search(pattern, string)
     if m and m.group(0):
-        raise Exception, \
-            (msg or '{0!r} matches {1!r}'.format(pattern, string))
+        raise Exception ((msg or '{0!r} matches {1!r}'.format(pattern, string)))
 
 __all__ = ["__", "___", "____", "_____", "assert_match","assert_no_match"]
 
