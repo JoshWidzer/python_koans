@@ -14,7 +14,7 @@ from runner.koan import *
 # contemplate_koans.py
 # koans/
 #     __init__.py
-#     about_asserts.py
+#     01_about_asserts.py
 #     about_attribute_access.py
 #     about_class_attributes.py
 #     about_classes.py
