@@ -6,8 +6,10 @@
 #
 
 from runner.koan import *
+import unittest
 
-class AboutLists(Koan):
+
+class AboutLists(unittest.TestCase):
     def test_creating_lists(self):
         empty_list = list()
         self.assertEqual(list, type(empty_list))

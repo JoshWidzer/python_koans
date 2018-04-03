@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from runner.koan import *
+import unittest
 
-class AboutStrings(Koan):
+class AboutStrings(unittest.TestCase):
 
     def test_double_quoted_strings_are_strings(self):
         string = "Hello, world."

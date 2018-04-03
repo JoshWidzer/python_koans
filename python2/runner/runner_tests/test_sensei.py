@@ -57,7 +57,7 @@ Traceback (most recent call last):
     import path_to_enlightenment
   File "/Users/Greg/hg/python_koans/runner/path_to_enlightenment.py", line 8, in <module>
     from koans import *
-  File "/Users/Greg/hg/python_koans/koans/about_asserts.py", line 20
+  File "/Users/Greg/hg/python_koans/koans/01_about_asserts.py", line 20
     self.assertTrue(eoe"Pen" > "Sword", "nhnth")
                            ^
 SyntaxError: invalid syntax"""
