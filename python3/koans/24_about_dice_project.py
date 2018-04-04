@@ -4,6 +4,7 @@
 from runner.koan import *
 
 import random
+import unittest
 
 class DiceSet:
     def __init__(self):
@@ -18,7 +19,7 @@ class DiceSet:
         # Tip: random.randint(min, max) can be used to generate random numbers
         pass
 
-class AboutDiceProject(Koan):
+class AboutDiceProject(unittest.TestCase):
     def test_can_create_a_dice_set(self):
         dice = DiceSet()
         self.assertTrue(dice)

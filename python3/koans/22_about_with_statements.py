@@ -8,8 +8,9 @@
 from runner.koan import *
 
 import re # For regular expression string comparisons
+import unittest
 
-class AboutWithStatements(Koan):
+class AboutWithStatements(unittest.TestCase):
     def count_lines(self, file_name):
         try:
             file = open(file_name)

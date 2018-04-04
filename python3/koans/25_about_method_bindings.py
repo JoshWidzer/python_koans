@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from runner.koan import *
+import unittest
 
 def function():
     return "pineapple"
@@ -13,7 +14,7 @@ class Class:
     def method(self):
         return "parrot"
 
-class AboutMethodBindings(Koan):
+class AboutMethodBindings(unittest.TestCase):
     def test_methods_are_bound_to_an_object(self):
         obj = Class()
         self.assertEqual(__, obj.method.__self__ == obj)

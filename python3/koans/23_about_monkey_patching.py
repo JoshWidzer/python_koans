@@ -6,8 +6,9 @@
 #
 
 from runner.koan import *
+import unittest
 
-class AboutMonkeyPatching(Koan):
+class AboutMonkeyPatching(unittest.TestCase):
     class Dog:
         def bark(self):
             return "WOOF"
