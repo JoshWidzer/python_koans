@@ -6,8 +6,10 @@
 #
 
 from runner.koan import *
+import unittest
 
-class AboutDictionaries(Koan):
+
+class AboutLists(unittest.TestCase):
     def test_creating_dictionaries(self):
         empty_dict = dict()
         self.assertEqual(dict, type(empty_dict))

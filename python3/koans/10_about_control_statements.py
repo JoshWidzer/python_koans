@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from runner.koan import *
+import unittest
 
-class AboutControlStatements(Koan):
+
+class AboutControlStatements(unittest.TestCase):
 
     def test_if_then_else_statements(self):
         if True:

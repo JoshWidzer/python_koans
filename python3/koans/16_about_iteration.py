@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from runner.koan import *
+import unittest
 
-class AboutIteration(Koan):
+
+class AboutIteration(unittest.TestCase):
 
     def test_iterators_are_a_type(self):
         it = iter(range(1,6))

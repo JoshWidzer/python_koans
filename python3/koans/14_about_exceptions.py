@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 from runner.koan import *
+import unittest
 
-class AboutExceptions(Koan):
+
+
+class AboutExceptions(unittest.TestCase):
 
     class MySpecialError(RuntimeError):
         pass
